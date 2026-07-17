@@ -92,9 +92,60 @@ h3 { font-size: 18px; }
   object-fit: cover;
 }
 
-.hero-media img {
-  aspect-ratio: 4 / 5;
+.hero-media {
+  display: grid;
+  place-items: center;
+}
+
+.phone-card {
+  width: 100%;
+  display: grid;
+  gap: 14px;
+}
+
+.phone-shell {
+  margin: 0 auto;
+  width: min(100%, 360px);
+  padding: 14px;
+  border-radius: 36px;
+  background: linear-gradient(180deg, #122a26 0%, #0b1715 100%);
+  box-shadow: 0 24px 56px rgba(20, 61, 53, 0.24);
+}
+
+.phone-screen {
+  overflow: hidden;
   border-radius: 24px;
+  background: #0f1e1c;
+}
+
+.phone-screen img {
+  aspect-ratio: 9 / 14;
+  border-radius: 24px;
+}
+
+.phone-stack {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.mini-card {
+  overflow: hidden;
+  border: 1px solid #d6dedb;
+  border-radius: 20px;
+  background: #fff;
+}
+
+.mini-card img {
+  aspect-ratio: 4 / 3;
+}
+
+.mini-card span {
+  display: block;
+  padding: 10px 12px 12px;
+  color: #30423d;
+  font-size: 14px;
+  font-weight: 800;
 }
 
 .strip {
@@ -167,6 +218,47 @@ input {
 }
 
 form .button { width: 100%; margin-top: 18px; }
+
+.popup-backdrop {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(9, 20, 18, 0.45);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease;
+  z-index: 100;
+}
+
+.popup-backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.popup {
+  width: min(100%, 420px);
+  padding: 24px;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 28px 64px rgba(9, 20, 18, 0.28);
+}
+
+.popup h2 {
+  margin-bottom: 10px;
+}
+
+.popup p {
+  color: #4e5a57;
+  line-height: 1.55;
+}
+
+.popup-actions {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+}
 
 @media (max-width: 900px) {
   .hero, .strip, .cards, .auth-grid { grid-template-columns: 1fr; }

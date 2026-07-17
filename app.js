@@ -1,4 +1,5 @@
 const apiBase = "https://atlanticexpress-api.sportbanter.online";
+const appDownloadUrl = "https://expo.dev/accounts/3my1991/projects/across-test/builds";
 
 async function checkApi() {
   const state = document.getElementById("healthState");
@@ -37,5 +38,35 @@ function wireAuthForms() {
   document.getElementById("signupForm").addEventListener("submit", (event) => handleSubmit(event, "signup"));
 }
 
+function wireDownloadPopup() {
+  const popup = document.getElementById("downloadPopup");
+  const dismiss = document.getElementById("dismissPopup");
+  const seenKey = "atlanticexpress.downloadPopupSeen";
+
+  if (!popup || !dismiss) return;
+  if (sessionStorage.getItem(seenKey) === "1") return;
+
+  const openPopup = () => {
+    popup.classList.add("open");
+    popup.setAttribute("aria-hidden", "false");
+  };
+  const closePopup = () => {
+    popup.classList.remove("open");
+    popup.setAttribute("aria-hidden", "true");
+    sessionStorage.setItem(seenKey, "1");
+  };
+
+  setTimeout(openPopup, 4000);
+  dismiss.addEventListener("click", closePopup);
+  popup.addEventListener("click", (event) => {
+    if (event.target === popup) closePopup();
+  });
+
+  document.querySelectorAll(`a[href="${appDownloadUrl}"]`).forEach((link) => {
+    link.addEventListener("click", closePopup);
+  });
+}
+
 checkApi();
 wireAuthForms();
+wireDownloadPopup();

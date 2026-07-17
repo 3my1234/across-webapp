@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Atlantic Express</title>
+    <title>Atlantic Shansu Logistics Limited</title>
     <meta
       name="description"
-      content="Atlantic Express moves factory-direct products from China to Nigerian buyers with transparent pricing and escrow protection."
+      content="ATLANTIC SHANSU LOGISTICS LIMITED is an end-to-end procurement and supply chain logistics platform for Nigerian businesses and consumers."
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -14,10 +14,13 @@
     <main class="page">
       <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">Atlantic Express</p>
-          <h1>Factory-direct shopping for Nigeria.</h1>
+          <p class="eyebrow">Atlantic Shansu Logistics Limited</p>
+          <h1>Factory-direct logistics, procurement, and e-commerce.</h1>
           <p class="lead">
-            Buy from China, pay in naira, and track every order through escrow-backed delivery.
+            ATLANTIC SHANSU LOGISTICS LIMITED is an end-to-end procurement and supply chain logistics platform.
+            We enable Nigerian businesses and consumers to seamlessly source, clear, and transport commercial goods
+            and electronics directly from international manufacturers to Nigeria. We use Flutterwave to safely
+            collect payments for logistics services, handling fees, and freight aggregation.
           </p>
           <div class="actions">
             <a class="button primary" href="#auth">Sign in</a>
@@ -25,18 +28,43 @@
           </div>
           <div class="health-card">
             <span>Backend</span>
-            <strong id="healthState">Checking API…</strong>
+            <strong id="healthState">Checking API...</strong>
           </div>
         </div>
         <div class="hero-media">
-          <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1000&q=80" alt="Warehouse products" />
+          <div class="phone-card">
+            <div class="phone-shell">
+              <div class="phone-screen">
+                <img
+                  src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=900&q=80"
+                  alt="Electronics showcased in the app"
+                />
+              </div>
+            </div>
+            <div class="phone-stack">
+              <article class="mini-card">
+                <img
+                  src="https://images.unsplash.com/photo-1585386959984-a41552231693?auto=format&fit=crop&w=700&q=80"
+                  alt="Mobile devices"
+                />
+                <span>Mobile devices</span>
+              </article>
+              <article class="mini-card">
+                <img
+                  src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=700&q=80"
+                  alt="Consumer goods"
+                />
+                <span>Fashion & goods</span>
+              </article>
+            </div>
+          </div>
         </div>
       </section>
 
       <section class="strip">
         <article>
           <strong>Transparent pricing</strong>
-          <span>Customs, VAT, and stamp duty shown before checkout.</span>
+          <span>Customs, VAT, and handling fees shown before checkout.</span>
         </article>
         <article>
           <strong>Escrow protection</strong>
@@ -55,17 +83,26 @@
         </div>
         <div class="cards">
           <article class="card">
-            <img src="https://images.unsplash.com/photo-1585386959984-a41552231693?auto=format&fit=crop&w=900&q=80" alt="Phones and accessories" />
+            <img
+              src="https://images.unsplash.com/photo-1585386959984-a41552231693?auto=format&fit=crop&w=900&q=80"
+              alt="Phones and accessories"
+            />
             <h3>Phones & Accessories</h3>
             <p>Chargers, earbuds, cables, and mobile tools.</p>
           </article>
           <article class="card">
-            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80" alt="Fashion items" />
+            <img
+              src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80"
+              alt="Fashion items"
+            />
             <h3>Fashion</h3>
             <p>Clothes, shoes, bags, and everyday wear.</p>
           </article>
           <article class="card">
-            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=900&q=80" alt="Electronics" />
+            <img
+              src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=900&q=80"
+              alt="Electronics"
+            />
             <h3>Electronics</h3>
             <p>Household devices and reliable gadgets.</p>
           </article>
@@ -81,7 +118,7 @@
           <form class="panel" id="signinForm">
             <h3>Sign in</h3>
             <label>Email <input type="email" name="email" placeholder="you@example.com" required /></label>
-            <label>Password <input type="password" name="password" placeholder="••••••••" required /></label>
+            <label>Password <input type="password" name="password" placeholder="********" required /></label>
             <button class="button primary" type="submit">Continue</button>
           </form>
           <form class="panel" id="signupForm">
@@ -95,6 +132,19 @@
         </div>
       </section>
     </main>
+
+    <div class="popup-backdrop" id="downloadPopup" aria-hidden="true">
+      <section class="popup" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+        <p class="eyebrow">Get the app</p>
+        <h2 id="popupTitle">Download Atlantic Express</h2>
+        <p>Use the mobile app for faster checkout, live tracking, and escrow updates.</p>
+        <div class="popup-actions">
+          <a class="button primary" href="https://expo.dev/accounts/3my1991/projects/across-test/builds" target="_blank" rel="noreferrer">Download app</a>
+          <button class="button secondary" id="dismissPopup" type="button">Maybe later</button>
+        </div>
+      </section>
+    </div>
+
     <script src="./app.js"></script>
   </body>
 </html>
