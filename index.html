@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atlantic Express</title>
+    <meta
+      name="description"
+      content="Atlantic Express moves factory-direct products from China to Nigerian buyers with transparent pricing and escrow protection."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Atlantic Express</p>
+          <h1>Factory-direct shopping for Nigeria.</h1>
+          <p class="lead">
+            Buy from China, pay in naira, and track every order through escrow-backed delivery.
+          </p>
+          <div class="actions">
+            <a class="button primary" href="#auth">Sign in</a>
+            <a class="button secondary" href="#auth">Create account</a>
+          </div>
+          <div class="health-card">
+            <span>Backend</span>
+            <strong id="healthState">Checking API…</strong>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1000&q=80" alt="Warehouse products" />
+        </div>
+      </section>
+
+      <section class="strip">
+        <article>
+          <strong>Transparent pricing</strong>
+          <span>Customs, VAT, and stamp duty shown before checkout.</span>
+        </article>
+        <article>
+          <strong>Escrow protection</strong>
+          <span>Funds release after delivery confirmation.</span>
+        </article>
+        <article>
+          <strong>Live tracking</strong>
+          <span>See purchase, transit, and delivery milestones.</span>
+        </article>
+      </section>
+
+      <section class="showcase" id="about">
+        <div class="section-head">
+          <p class="eyebrow">What we sell</p>
+          <h2>Popular categories</h2>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1585386959984-a41552231693?auto=format&fit=crop&w=900&q=80" alt="Phones and accessories" />
+            <h3>Phones & Accessories</h3>
+            <p>Chargers, earbuds, cables, and mobile tools.</p>
+          </article>
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80" alt="Fashion items" />
+            <h3>Fashion</h3>
+            <p>Clothes, shoes, bags, and everyday wear.</p>
+          </article>
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=900&q=80" alt="Electronics" />
+            <h3>Electronics</h3>
+            <p>Household devices and reliable gadgets.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="auth" id="auth">
+        <div class="section-head">
+          <p class="eyebrow">Get started</p>
+          <h2>Sign in or create an account</h2>
+        </div>
+        <div class="auth-grid">
+          <form class="panel" id="signinForm">
+            <h3>Sign in</h3>
+            <label>Email <input type="email" name="email" placeholder="you@example.com" required /></label>
+            <label>Password <input type="password" name="password" placeholder="••••••••" required /></label>
+            <button class="button primary" type="submit">Continue</button>
+          </form>
+          <form class="panel" id="signupForm">
+            <h3>Create account</h3>
+            <label>Full name <input type="text" name="full_name" placeholder="Your name" required /></label>
+            <label>Email <input type="email" name="email" placeholder="you@example.com" required /></label>
+            <label>Phone <input type="tel" name="phone" placeholder="+234..." /></label>
+            <label>Password <input type="password" name="password" placeholder="8+ characters" required /></label>
+            <button class="button secondary" type="submit">Create account</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>
