@@ -13,8 +13,14 @@ const types = {
 
 http
   .createServer((req, res) => {
-    const urlPath = req.url === "/" ? "/index.html" : req.url.split("?")[0];
-    const filePath = path.join(root, path.normalize(urlPath));
+    const urlPath = req.url.split("?")[0];
+    if (urlPath === "/health") {
+      res.writeHead(200, { "Content-Type": "application/json; charset=utf-8" });
+      res.end(JSON.stringify({ ok: true, service: "across-webapp", status: "healthy" }));
+      return;
+    }
+    const normalizedPath = urlPath === "/" ? "/index.html" : urlPath;
+    const filePath = path.join(root, path.normalize(normalizedPath));
     if (!filePath.startsWith(root)) {
       res.writeHead(403);
       res.end("Forbidden");
