@@ -1,4 +1,4 @@
-const apiBase = "https://atlanticexpress-api.sportbanter.online";
+const apiBase = "https://api.atlxpres.com";
 const appDownloadUrl = "https://expo.dev/accounts/3my1991/projects/across-test/builds";
 
 async function checkApi() {
