@@ -9,6 +9,8 @@ const types = {
   ".html": "text/html; charset=utf-8",
   ".css": "text/css; charset=utf-8",
   ".js": "application/javascript; charset=utf-8",
+  ".png": "image/png",
+  ".webp": "image/webp",
 };
 
 http
@@ -20,8 +22,9 @@ http
       return;
     }
     const normalizedPath = urlPath === "/" ? "/index.html" : urlPath;
-    const filePath = path.join(root, path.normalize(normalizedPath));
-    if (!filePath.startsWith(root)) {
+    const filePath = path.resolve(root, "." + normalizedPath);
+    const relative = path.relative(root, filePath);
+    if (relative.startsWith("..") || path.isAbsolute(relative) || relative.split(path.sep).some(part => part.startsWith("."))) {
       res.writeHead(403);
       res.end("Forbidden");
       return;
