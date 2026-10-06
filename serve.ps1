@@ -9,6 +9,8 @@ $types = @{
   ".html" = "text/html; charset=utf-8"
   ".css" = "text/css; charset=utf-8"
   ".js" = "application/javascript; charset=utf-8"
+  ".png" = "image/png"
+  ".webp" = "image/webp"
 }
 
 function Write-HttpResponse($stream, [int]$status, [string]$statusText, [string]$contentType, [byte[]]$body) {
