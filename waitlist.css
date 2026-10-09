@@ -1,0 +1,17 @@
+.waitlist-section { display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:start;padding-top:76px;padding-bottom:76px;scroll-margin-top:100px; }
+.waitlist-section h2 {font-size:clamp(32px,4vw,52px);line-height:1.12;margin:14px 0 24px;letter-spacing:-1.5px;}
+.waitlist-section p {color:#52675f;line-height:1.7;max-width:52ch;}
+.waitlist-form {background:#fff;border:1px solid #e0e8e3;border-radius:20px;padding:30px;display:grid;gap:18px;box-shadow:0 16px 48px #183b2510;}
+.waitlist-form label {display:grid;gap:8px;font-size:14px;font-weight:650;color:#18382c;}
+.waitlist-form input,.waitlist-form select {width:100%;box-sizing:border-box;padding:13px 14px;font:inherit;border:1px solid #cdd9d2;border-radius:9px;background:#fff;color:#18382c;min-width:0;}
+.waitlist-form input:focus-visible,.waitlist-form select:focus-visible {outline:3px solid #90bfa5;outline-offset:2px;}
+.waitlist-form .consent {display:flex;align-items:flex-start;font-size:12px;font-weight:400;line-height:1.6;gap:10px;}
+.waitlist-form .consent input {width:18px;height:18px;flex:0 0 auto;margin-top:2px;}
+.waitlist-form .honeypot {position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);}
+.waitlist-form button {border:0;cursor:pointer;width:100%;font:inherit;}
+.waitlist-form button:disabled {opacity:.65;cursor:wait;}
+#waitlistMessage {margin:0;font-size:14px;}
+#waitlistMessage[data-state="error"] {color:#a12232;}
+#waitlistMessage[data-state="success"] {color:#126443;}
+.launch-price {display:inline-block;background:#eef5e8;color:#31522e;border-radius:100px;padding:9px 16px;font-size:13px;font-weight:650;}
+@media(max-width:760px){.waitlist-section {grid-template-columns:minmax(0,1fr);gap:24px;padding-top:44px;padding-bottom:44px;}.waitlist-form {padding:22px;}}

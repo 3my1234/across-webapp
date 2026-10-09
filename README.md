@@ -9,3 +9,6 @@ The five supplied images are encoded as WebP without cropping. Desktop hero text
 Contact: support@atlxpres.com and +234 706 050 7214. Provider links open https://provider.atlxpres.com. Customer category links explain mobile app availability; replace that launch section with verified public store links when the apps are published. Internal EAS builds are not public downloads.
 
 Validation: headless Chrome at 320, 390, 768, 820, 1024 and 1440 CSS pixels, checking image loading, horizontal overflow, and hero/provider stacking. Storage upload regression tests belong to the separate provider portal repository.
+
+
+Launch waitlist: link advertisements to https://atlxpres.com/?utm_source=tiktok#waitlist (or twitter/facebook). Email and explicit launch-email consent are required; name and phone are optional. The form POSTs to https://api.atlxpres.com/api/v1/waitlist. Deploy backend migration 068 before this website. Admin > Launch waitlist shows signups and provides a private CSV with consent metadata. No emails are automatically sent. Check a real signup after deployment before starting ads. Launch updates start at NGN 500/month for providers; no unverified cheapest-platform claim is made. Unsubscribe requests currently go to support@atlxpres.com for manual removal.
